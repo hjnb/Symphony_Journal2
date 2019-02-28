@@ -62,7 +62,7 @@ Partial Class ユニット日誌
         Me.paintBlack = New System.Windows.Forms.ToolStripMenuItem()
         Me.paintBlue = New System.Windows.Forms.ToolStripMenuItem()
         Me.paintRed = New System.Windows.Forms.ToolStripMenuItem()
-        Me.dgvUnitDiary = New Symphony_Journal.ExDataGridView(Me.components)
+        Me.dgvUnitDiary = New ExDataGridView(Me.components)
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -512,7 +512,7 @@ Partial Class ユニット日誌
     Friend WithEvents rbtnNightWork As System.Windows.Forms.RadioButton
     Friend WithEvents dayWorkPic As System.Windows.Forms.PictureBox
     Friend WithEvents nightWorkPic As System.Windows.Forms.PictureBox
-    Friend WithEvents dgvUnitDiary As Symphony_Journal.ExDataGridView
+    Friend WithEvents dgvUnitDiary As ExDataGridView
     Friend WithEvents colorContextMenu As System.Windows.Forms.ContextMenuStrip
     Friend WithEvents paintBlack As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents paintBlue As System.Windows.Forms.ToolStripMenuItem

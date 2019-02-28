@@ -52,7 +52,7 @@ Partial Class SS生活の様子
         Me.btnRowInsert = New System.Windows.Forms.Button()
         Me.btnRowDelete = New System.Windows.Forms.Button()
         Me.namLabel = New System.Windows.Forms.Label()
-        Me.dgvShtM = New Symphony_Journal.SSDataGridView(Me.components)
+        Me.dgvShtM = New SSDataGridView(Me.components)
         Me.Panel1.SuspendLayout()
         Me.Panel5.SuspendLayout()
         Me.Panel4.SuspendLayout()
@@ -425,7 +425,7 @@ Partial Class SS生活の様子
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents dateYmdBox As ymdBox.ymdBox
     Friend WithEvents Label5 As System.Windows.Forms.Label
-    Friend WithEvents dgvShtM As Symphony_Journal.SSDataGridView
+    Friend WithEvents dgvShtM As SSDataGridView
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents Panel3 As System.Windows.Forms.Panel
     Friend WithEvents Panel4 As System.Windows.Forms.Panel
