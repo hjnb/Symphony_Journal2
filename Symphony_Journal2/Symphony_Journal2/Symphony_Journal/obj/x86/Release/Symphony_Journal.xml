@@ -1,0 +1,999 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Symphony_Journal
+</name>
+</assembly>
+<members>
+<member name="M:Symphony_Journal.Util.EnableDoubleBuffering(System.Windows.Forms.Control)">
+	<summary>
+ コントロールのDoubleBufferedプロパティをTrueにする
+ </summary>
+	<param name="control">対象のコントロール</param>
+</member><member name="M:Symphony_Journal.Util.checkDBNullValue(System.Object)">
+	<summary>
+ dgvのセルの値がNullかチェック、Nullの場合空文字を返す
+ </summary>
+	<param name="dgvCellValue"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.Util.convADStrToWarekiStr(System.String)">
+	<summary>
+ 西暦(yyyy/MM/dd)を和暦に変換
+ </summary>
+	<param name="adStr"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.Util.convWarekiStrToADStr(System.String)">
+	<summary>
+ 和暦を西暦に変換
+ </summary>
+	<param name="warekiStr"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.Util.getKanji(System.String)">
+	<summary>
+ 和暦の漢字を取得
+ </summary>
+	<param name="warekiStr"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.Util.getIniString(System.String,System.String,System.String)">
+	<summary>
+ iniファイルから読み込み
+ </summary>
+	<param name="lpSection">セクション名</param>
+	<param name="lpKeyName">読み込むkey名</param>
+	<param name="lpFileName">iniファイルパス</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.Util.putIniString(System.String,System.String,System.String,System.String)">
+	<summary>
+ iniファイルへ書き込み
+ </summary>
+	<param name="lpSection">セクション名</param>
+	<param name="lpKeyName">書き込む対象のkey名</param>
+	<param name="lpValue">書き込む値</param>
+	<param name="lpFileName">iniファイルパス</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.ユニット日誌.#ctor(System.String,System.String)">
+	<summary>
+ コンストラクタ
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.ユニット日誌.ユニット日誌_Load(System.Object,System.EventArgs)">
+	<summary>
+ Loadイベント
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.ユニット日誌.createCellStyles">
+	<summary>
+ セルスタイル作成
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.ユニット日誌.displayUnitDiary(System.String,System.String)">
+	<summary>
+ 対象日付、ユニットの日誌データ表示
+ </summary>
+	<param name="unitName">ユニット名</param>
+	<param name="ymd">日付(yyyy/MM/dd)</param>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.ユニット日誌.inputClear">
+	<summary>
+ 入力内容クリア
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.ユニット日誌.initDgvUnitDiary">
+	<summary>
+ dgv初期設定
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.ユニット日誌.initTextBox">
+	<summary>
+ テキストボックス初期設定
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.ユニット日誌.getResidentList(System.String)">
+	<summary>
+ 入居者リスト取得
+ </summary>
+	<param name="unitName">ユニット名</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.ユニット日誌.unitListBox_SelectedValueChanged(System.Object,System.EventArgs)">
+	<summary>
+ ユニット値変更イベント
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.ユニット日誌.residentListBox_SelectedValueChanged(System.Object,System.EventArgs)">
+	<summary>
+ 入居者名リスト値変更イベント
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.ユニット日誌.textBox_KeyDown(System.Object,System.Windows.Forms.KeyEventArgs)">
+	<summary>
+ テキストボックス部分のkeyDownイベント
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.ユニット日誌.YmdBox_YmdTextChange(System.Object,System.EventArgs)">
+	<summary>
+ 日付ボックス変更イベント
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.ユニット日誌.rbtnDayWork_CheckedChanged(System.Object,System.EventArgs)">
+	<summary>
+ 日勤ラジオボタン変更イベント
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.ユニット日誌.rbtnNightWork_CheckedChanged(System.Object,System.EventArgs)">
+	<summary>
+ 夜勤ラジオボタン変更イベント
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.ユニット日誌.dayWorkPic_DoubleClick(System.Object,System.EventArgs)">
+	<summary>
+ 日勤印影画像ダブルクリックイベント
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.ユニット日誌.nightWorkPic_DoubleClick(System.Object,System.EventArgs)">
+	<summary>
+ 夜勤印影画像ダブルクリックイベント
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.ユニット日誌.paintBlack_Click(System.Object,System.EventArgs)">
+	<summary>
+ 右クリックメニューで黒選択時のイベント
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.ユニット日誌.paintBlue_Click(System.Object,System.EventArgs)">
+	<summary>
+ 右クリックメニューで青選択時のイベント
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.ユニット日誌.paintRed_Click(System.Object,System.EventArgs)">
+	<summary>
+ 右クリックメニューで赤選択時のイベント
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.ユニット日誌.convNum(System.String)">
+	<summary>
+ 登録用数値に変換
+ </summary>
+	<param name="inputStr"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.ユニット日誌.btnPrint_Click(System.Object,System.EventArgs)">
+	<summary>
+ 印刷ボタンクリックイベント
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.ユニット日誌.btnRegist_Click(System.Object,System.EventArgs)">
+	<summary>
+ 登録ボタンクリックイベント
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.ユニット日誌.btnObserve_Click(System.Object,System.EventArgs)">
+	<summary>
+ 便観察ボタンクリックイベント
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.便観察.#ctor(System.String,System.String,System.String,System.String,System.Int32,System.Int32)">
+	<summary>
+ コンストラクタ
+ </summary>
+	<param name="unitName">ユニット名</param>
+	<param name="warekiStr">和暦</param>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.便観察.便観察_Load(System.Object,System.EventArgs)">
+	<summary>
+ loadイベント
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.便観察.initDgvBen">
+	<summary>
+ データグリッドビュー初期設定
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.便観察.displayDgvBen">
+	<summary>
+ 便観察データ表示
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.便観察.dgvBen_CellEnter(System.Object,System.Windows.Forms.DataGridViewCellEventArgs)">
+	<summary>
+ セルエンターイベント
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.便観察.btnRegist_Click(System.Object,System.EventArgs)">
+	<summary>
+ 登録ボタンクリックイベント
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.施設介護支援経過表.施設介護支援経過表_Load(System.Object,System.EventArgs)">
+	<summary>
+ loadイベント
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.施設介護支援経過表.initDgvSkei">
+	<summary>
+ データグリッドビュー初期設定
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.施設介護支援経過表.initWriterList">
+	<summary>
+ 記入者リストボックス初期設定
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.施設介護支援経過表.displayDgvSkei(System.String,System.String)">
+	<summary>
+ 経過内容データ表示
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.施設介護支援経過表.clearInput">
+	<summary>
+ 入力内容クリア
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.施設介護支援経過表.writerListBox_SelectedValueChanged(System.Object,System.EventArgs)">
+	<summary>
+ 記入者リストボックス値変更イベント
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.施設介護支援経過表.getResidentList(System.String)">
+	<summary>
+ 対象ユニットの入居者リストを取得
+ </summary>
+	<param name="unitName"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.施設介護支援経過表.getHistoryList(System.String)">
+	<summary>
+ 対象の入居者の経過履歴リスト取得
+ </summary>
+	<param name="residentName"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.施設介護支援経過表.unitListBox_SelectedValueChanged(System.Object,System.EventArgs)">
+	<summary>
+ ユニットリスト値変更イベント
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.施設介護支援経過表.residentListBox_SelectedValueChanged(System.Object,System.EventArgs)">
+	<summary>
+ 入居者リスト値変更イベント
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.施設介護支援経過表.historyListBox_SelectedValueChanged(System.Object,System.EventArgs)">
+	<summary>
+ 経過履歴リスト値変更イベント
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.施設介護支援経過表.YmdBox_YmdTextChange(System.Object,System.EventArgs)">
+	<summary>
+ 日付ボックス値変更イベント
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.施設介護支援経過表.dgvSkei_EditingControlShowing(System.Object,System.Windows.Forms.DataGridViewEditingControlShowingEventArgs)">
+	<summary>
+ EditingControlShowingイベント
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.施設介護支援経過表.dgvTextBox_KeyPress(System.Object,System.Windows.Forms.KeyPressEventArgs)">
+	<summary>
+ dgvのKeyPressイベント
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.施設介護支援経過表.btnRowInsert_Click(System.Object,System.EventArgs)">
+	<summary>
+ 行挿入ボタンクリックイベント
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.施設介護支援経過表.btnRowDelete_Click(System.Object,System.EventArgs)">
+	<summary>
+ 行削除ボタンクリックイベント
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.施設介護支援経過表.btnClear_Click(System.Object,System.EventArgs)">
+	<summary>
+ クリアボタンクリックイベント
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.施設介護支援経過表.btnRegist_Click(System.Object,System.EventArgs)">
+	<summary>
+ 登録ボタンクリックイベント
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.施設介護支援経過表.btnDelete_Click(System.Object,System.EventArgs)">
+	<summary>
+ 削除ボタンクリックイベント
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.施設介護支援経過表.btnPrint_Click(System.Object,System.EventArgs)">
+	<summary>
+ 印刷ボタンクリックイベント
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.ExDataGridView.ExDataGridView_CellPainting(System.Object,System.Windows.Forms.DataGridViewCellPaintingEventArgs)">
+	<summary>
+ CellPaintingイベント
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="T:Symphony_Journal.入居者登録.dgvRowHeaderCell">
+	<summary>
+ 行ヘッダーのカレントセルを表す三角マークを非表示に設定する為のクラス。
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.入居者登録.#ctor">
+	<summary>
+ コンストラクタ
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.入居者登録.入居者登録_Load(System.Object,System.EventArgs)">
+	<summary>
+ Loadイベント
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.入居者登録.入居者登録_KeyDown(System.Object,System.Windows.Forms.KeyEventArgs)">
+	<summary>
+ KeyDownイベント
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.入居者登録.initTextBox">
+	<summary>
+ テキストボックス等初期設定
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.入居者登録.initDgvResident">
+	<summary>
+ データグリッドビュー初期設定
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.入居者登録.displayDgvResident">
+	<summary>
+ データグリッドビュー表示
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.入居者登録.settingDgvResident">
+	<summary>
+ dgv表示設定
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.入居者登録.inputClear">
+	<summary>
+ 入力内容クリア
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.入居者登録.dgvResident_CellFormatting(System.Object,System.Windows.Forms.DataGridViewCellFormattingEventArgs)">
+	<summary>
+ CellFormattingイベント
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.入居者登録.dgvResident_CellMouseClick(System.Object,System.Windows.Forms.DataGridViewCellMouseEventArgs)">
+	<summary>
+ セルマウスクリックイベント
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.入居者登録.dgvResident_CellPainting(System.Object,System.Windows.Forms.DataGridViewCellPaintingEventArgs)">
+	<summary>
+ CellPaintingイベント
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.入居者登録.dgvResident_ColumnHeaderMouseDoubleClick(System.Object,System.Windows.Forms.DataGridViewCellMouseEventArgs)">
+	<summary>
+ 列ヘッダーダブルクリックイベント
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.入居者登録.btnNewRegist_Click(System.Object,System.EventArgs)">
+	<summary>
+ 新規ボタンクリックイベント
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.入居者登録.btnChange_Click(System.Object,System.EventArgs)">
+	<summary>
+ 変更ボタンクリックイベント
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.入居者登録.btnDelete_Click(System.Object,System.EventArgs)">
+	<summary>
+ 削除ボタンクリックイベント
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.入居者登録.btnPrint_Click(System.Object,System.EventArgs)">
+	<summary>
+ 印刷ボタンクリックイベント
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.申し送り.申し送り_Load(System.Object,System.EventArgs)">
+	<summary>
+ loadイベント
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.申し送り.initWriterList">
+	<summary>
+ 記入者リストボックス初期設定
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.申し送り.writerListBox_SelectedValueChanged(System.Object,System.EventArgs)">
+	<summary>
+ 記入者リストボックス値変更イベント
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.申し送り.initDgvInput">
+	<summary>
+ dgv(上)初期設定
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.申し送り.initDgvRead">
+	<summary>
+ dgv(下)初期設定
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.申し送り.displayDgvRead">
+	<summary>
+ データ表示
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.申し送り.dgvRead_CellFormatting(System.Object,System.Windows.Forms.DataGridViewCellFormattingEventArgs)">
+	<summary>
+ dgv(下)CellFormattingイベント
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.申し送り.dgvInput_CellPainting(System.Object,System.Windows.Forms.DataGridViewCellPaintingEventArgs)">
+	<summary>
+ dgv(上)CellPaintingイベント
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.申し送り.dgvInput_EditingControlShowing(System.Object,System.Windows.Forms.DataGridViewEditingControlShowingEventArgs)">
+	<summary>
+ dgv(上)EditingControlShowingイベント
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.申し送り.dgvInputTextBox_KeyPress(System.Object,System.Windows.Forms.KeyPressEventArgs)">
+	<summary>
+ dgv(上)KeyPressイベント
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.申し送り.dgvRead_CellMouseClick(System.Object,System.Windows.Forms.DataGridViewCellMouseEventArgs)">
+	<summary>
+ dgv(下)セルマウスクリックイベント
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.申し送り.clearInput">
+	<summary>
+ 入力内容クリア
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.申し送り.btnRegist_Click(System.Object,System.EventArgs)">
+	<summary>
+ 登録ボタンクリックイベント
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.申し送り.btnDelete_Click(System.Object,System.EventArgs)">
+	<summary>
+ 行削除ボタンクリックイベント
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="P:Symphony_Journal.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:Symphony_Journal.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:Symphony_Journal.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="M:Symphony_Journal.印刷条件.#ctor">
+	<summary>
+ コンストラクタ
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.印刷条件.印刷条件_KeyDown(System.Object,System.Windows.Forms.KeyEventArgs)">
+	<summary>
+ keyDownイベント
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.印刷条件.印刷条件_Load(System.Object,System.EventArgs)">
+	<summary>
+ loadイベント
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.印刷条件.initDgvUnit">
+	<summary>
+ dgv初期設定
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.印刷条件.consensual2TextBox_KeyDown(System.Object,System.Windows.Forms.KeyEventArgs)">
+	<summary>
+ （下の）合議テキストボックスkeyDownイベント
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.印刷条件.TextBox_Enter(System.Object,System.EventArgs)">
+	<summary>
+ テキストボックスenterイベント
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.印刷条件.TextBox_MouseDown(System.Object,System.Windows.Forms.MouseEventArgs)">
+	<summary>
+ テキストボックスマウスダウンイベント
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.印刷条件.rbtnPreview_CheckedChanged(System.Object,System.EventArgs)">
+	<summary>
+ プレビューラジオボタン値変更イベント
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.印刷条件.rbtnPrint_CheckedChanged(System.Object,System.EventArgs)">
+	<summary>
+ 印刷ラジオボタン値変更イベント
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.印刷条件.dgvUnit_CellMouseClick(System.Object,System.Windows.Forms.DataGridViewCellMouseEventArgs)">
+	<summary>
+ セルマウスクリックイベント
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.印刷条件.btnExcute_Click(System.Object,System.EventArgs)">
+	<summary>
+ 実行ボタンクリックイベント
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.印刷条件.writeUnitDiarySheet(Microsoft.Office.Interop.Excel.Worksheet,ADODB.Recordset)">
+	<summary>
+ ユニット日誌印刷書き込み
+ </summary>
+	<param name="oSheet"></param>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.印刷条件.writeBenSheet(Microsoft.Office.Interop.Excel.Worksheet,ADODB.Recordset)">
+	<summary>
+ 便観察印刷書き込み
+ </summary>
+	<param name="oSheet"></param>
+	<param name="rs"></param>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.印鑑パスワード.#ctor(System.String)">
+	<summary>
+ コンストラクタ
+ </summary>
+	<param name="mdbFilePass">データベースファイルパス</param>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.印鑑パスワード.印鑑パスワード_KeyDown(System.Object,System.Windows.Forms.KeyEventArgs)">
+	<summary>
+ keyDownイベント
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.印鑑パスワード.印鑑パスワード_Load(System.Object,System.EventArgs)">
+	<summary>
+ Loadイベント
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.印鑑パスワード.settingTextBox">
+	<summary>
+ テキストボックス設定
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.印鑑パスワード.checkPassword(System.String)">
+	<summary>
+ パスワード照合
+ </summary>
+	<param name="inputPass">入力パスワード</param>
+	<returns>パスワード登録済みの有無</returns>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.印鑑パスワード.changePassword(System.String,System.String)">
+	<summary>
+ 登録パスワード変更
+ </summary>
+	<param name="oldPass">旧パスワード</param>
+	<param name="newPass">新パスワード</param>
+	<returns>変更の有無</returns>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.印鑑パスワード.btnOk_Click(System.Object,System.EventArgs)">
+	<summary>
+ OKボタンクリックイベント
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.印鑑パスワード.btnCancel_Click(System.Object,System.EventArgs)">
+	<summary>
+ キャンセルボタンクリックイベント
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.印刷範囲.#ctor(System.String,System.String,System.String)">
+	<summary>
+ コンストラクタ
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.印刷範囲.印刷範囲_Load(System.Object,System.EventArgs)">
+	<summary>
+ loadイベント
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.印刷範囲.btnOk_Click(System.Object,System.EventArgs)">
+	<summary>
+ OKボタンクリックイベント
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.印刷範囲.btnCancel_Click(System.Object,System.EventArgs)">
+	<summary>
+ キャンセルボタンクリックイベント
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.SS生活の様子.SS生活の様子_Load(System.Object,System.EventArgs)">
+	<summary>
+ loadイベント
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.SS生活の様子.initResidentListBox">
+	<summary>
+ 入居者リストボックス初期設定
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.SS生活の様子.initDgvShtM">
+	<summary>
+ データグリッドビュー初期設定
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.SS生活の様子.displayDgvShtM(System.String,System.String,System.String)">
+	<summary>
+ データ表示
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.SS生活の様子.clearInput">
+	<summary>
+ 入力内容クリア
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.SS生活の様子.getHistoryList(System.String)">
+	<summary>
+ 履歴リスト取得
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.SS生活の様子.residentListBox_SelectedValueChanged(System.Object,System.EventArgs)">
+	<summary>
+ 入居者リスト値変更イベント
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.SS生活の様子.historyListBox_SelectedValueChanged(System.Object,System.EventArgs)">
+	<summary>
+ 履歴リスト値変更イベント
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.SS生活の様子.formatDateStr(System.String)">
+	<summary>
+ 和暦を変換
+ </summary>
+	<param name="warekiStr"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.SS生活の様子.btnTextClear_Click(System.Object,System.EventArgs)">
+	<summary>
+ テキストクリアボタンクリックイベント
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.SS生活の様子.btnRowInsert_Click(System.Object,System.EventArgs)">
+	<summary>
+ 行挿入ボタンクリックイベント
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.SS生活の様子.btnRowDelete_Click(System.Object,System.EventArgs)">
+	<summary>
+ 行削除ボタンクリックイベント
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.SS生活の様子.btnNew_Click(System.Object,System.EventArgs)">
+	<summary>
+ 新規ボタンクリックイベント
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.SS生活の様子.btnRegist_Click(System.Object,System.EventArgs)">
+	<summary>
+ 登録ボタンクリックイベント
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.SS生活の様子.btnDelete_Click(System.Object,System.EventArgs)">
+	<summary>
+ 削除ボタンクリックイベント
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.SS生活の様子.btnPrint_Click(System.Object,System.EventArgs)">
+	<summary>
+ 印刷ボタンクリックイベント
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="T:Symphony_Journal.印鑑登録.dgvRowHeaderCell">
+	<summary>
+ 行ヘッダーのカレントセルを表す三角マークを非表示に設定する為のクラス。
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.印鑑登録.#ctor">
+	<summary>
+ コンストラクタ
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.印鑑登録.印鑑登録_Load(System.Object,System.EventArgs)">
+	<summary>
+ Loadイベント
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.印鑑登録.印鑑登録_KeyDown(System.Object,System.Windows.Forms.KeyEventArgs)">
+	<summary>
+ keyDownイベント
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.印鑑登録.initTextBox">
+	<summary>
+ テキストボックス等初期設定
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.印鑑登録.initDgvSeal">
+	<summary>
+ データグリッドビュー初期設定
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.印鑑登録.displayDgvSeal">
+	<summary>
+ データグリッドビュー表示
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.印鑑登録.settingDgvSeal">
+	<summary>
+ dgv表示設定
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.印鑑登録.dgvSeal_CellMouseClick(System.Object,System.Windows.Forms.DataGridViewCellMouseEventArgs)">
+	<summary>
+ dgvセルマウスクリックイベント
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.印鑑登録.dgvSeal_CellPainting(System.Object,System.Windows.Forms.DataGridViewCellPaintingEventArgs)">
+	<summary>
+ CellPaintingイベント
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.印鑑登録.dgvSeal_ColumnHeaderMouseDoubleClick(System.Object,System.Windows.Forms.DataGridViewCellMouseEventArgs)">
+	<summary>
+ 列ヘッダーダブルクリックイベント
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.印鑑登録.inputClear">
+	<summary>
+ 入力内容クリア
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.印鑑登録.existsClass(System.String)">
+	<summary>
+ 職制が登録済みかチェック(1,2,3,4,5,6のみ)
+ </summary>
+	<param name="className">職制</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.印鑑登録.existsPassword(System.String)">
+	<summary>
+ ﾊﾟｽﾜｰﾄﾞが登録済みかチェック
+ </summary>
+	<param name="inputPass">ﾊﾟｽﾜｰﾄﾞ</param>
+	<returns>登録済みの有無</returns>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.印鑑登録.existsSealFile(System.String)">
+	<summary>
+ 印影ファイルがSealBoxに存在するかチェック
+ </summary>
+	<param name="sealFileName">印影ファイル名</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.印鑑登録.btnRegist_Click(System.Object,System.EventArgs)">
+	<summary>
+ 登録ボタンクリックイベント
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.印鑑登録.btnDelete_Click(System.Object,System.EventArgs)">
+	<summary>
+ 削除ボタンクリックイベント
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.印鑑登録.btnPrint_Click(System.Object,System.EventArgs)">
+	<summary>
+ 印刷ボタンクリックイベント
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.印鑑登録.btnPrintSealM_Click(System.Object,System.EventArgs)">
+	<summary>
+ プリントボタンクリックイベント
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.印鑑登録.sealNameBox_KeyDown(System.Object,System.Windows.Forms.KeyEventArgs)">
+	<summary>
+ 印影ﾌｧｲﾙ名ボックスKeyDownイベント
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:Symphony_Journal.SSDataGridView.ExDataGridView_CellPainting(System.Object,System.Windows.Forms.DataGridViewCellPaintingEventArgs)">
+	<summary>
+ CellPaintingイベント
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member>
+</members>
+</doc>
