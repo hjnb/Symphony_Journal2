@@ -27,10 +27,10 @@ Partial Class 申し送り
         Me.btnRegist = New System.Windows.Forms.Button()
         Me.btnDelete = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.writerLabel = New System.Windows.Forms.Label()
         Me.writerListBox = New System.Windows.Forms.ListBox()
         Me.dgvRead = New System.Windows.Forms.DataGridView()
         Me.HmBox = New hmBox.hmBox()
+        Me.writerBox = New System.Windows.Forms.TextBox()
         CType(Me.dgvInput, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         CType(Me.dgvRead, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -49,14 +49,15 @@ Partial Class 申し送り
         '
         Me.YmdBox.boxType = 8
         Me.YmdBox.DateText = ""
-        Me.YmdBox.EraLabelText = "H31"
+        Me.YmdBox.EraLabelText = "R02"
         Me.YmdBox.EraText = ""
         Me.YmdBox.Location = New System.Drawing.Point(28, 87)
-        Me.YmdBox.MonthLabelText = "02"
+        Me.YmdBox.MonthLabelText = "03"
         Me.YmdBox.MonthText = ""
         Me.YmdBox.Name = "YmdBox"
         Me.YmdBox.Size = New System.Drawing.Size(174, 46)
         Me.YmdBox.TabIndex = 1
+        Me.YmdBox.textReadOnly = False
         '
         'btnRegist
         '
@@ -78,22 +79,13 @@ Partial Class 申し送り
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.writerLabel)
+        Me.GroupBox1.Controls.Add(Me.writerBox)
         Me.GroupBox1.Location = New System.Drawing.Point(832, 215)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(111, 52)
         Me.GroupBox1.TabIndex = 4
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "記載者"
-        '
-        'writerLabel
-        '
-        Me.writerLabel.AutoSize = True
-        Me.writerLabel.ForeColor = System.Drawing.Color.Blue
-        Me.writerLabel.Location = New System.Drawing.Point(15, 23)
-        Me.writerLabel.Name = "writerLabel"
-        Me.writerLabel.Size = New System.Drawing.Size(0, 12)
-        Me.writerLabel.TabIndex = 0
         '
         'writerListBox
         '
@@ -124,6 +116,15 @@ Partial Class 申し送り
         Me.HmBox.Size = New System.Drawing.Size(111, 46)
         Me.HmBox.TabIndex = 7
         '
+        'writerBox
+        '
+        Me.writerBox.ForeColor = System.Drawing.Color.Blue
+        Me.writerBox.ImeMode = System.Windows.Forms.ImeMode.Hiragana
+        Me.writerBox.Location = New System.Drawing.Point(11, 20)
+        Me.writerBox.Name = "writerBox"
+        Me.writerBox.Size = New System.Drawing.Size(90, 19)
+        Me.writerBox.TabIndex = 8
+        '
         '申し送り
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
@@ -151,8 +152,8 @@ Partial Class 申し送り
     Friend WithEvents btnRegist As System.Windows.Forms.Button
     Friend WithEvents btnDelete As System.Windows.Forms.Button
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
-    Friend WithEvents writerLabel As System.Windows.Forms.Label
     Friend WithEvents writerListBox As System.Windows.Forms.ListBox
     Friend WithEvents dgvRead As System.Windows.Forms.DataGridView
     Friend WithEvents HmBox As hmBox.hmBox
+    Friend WithEvents writerBox As System.Windows.Forms.TextBox
 End Class
