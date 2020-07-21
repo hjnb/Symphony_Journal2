@@ -679,13 +679,12 @@ Public Class ユニット日誌
         If IsNothing(benForm) OrElse benForm.IsDisposed Then
             Dim unit As String = If(IsNothing(unitListBox.SelectedItem), "", unitListBox.SelectedItem.ToString())
             Dim ad As String = YmdBox.getADStr()
-            Dim wareki As String = YmdBox.getWarekiStr()
             Dim dayStr As String = YmdBox.getDay()
             If unit = "" Then
                 MsgBox("ユニットを選択して下さい。", MsgBoxStyle.Exclamation)
                 Return
             End If
-            benForm = New 便観察(unit, ad, wareki, dayStr, Me.Location.X, Me.Location.Y)
+            benForm = New 便観察(unit, ad, dayStr, Me.Location.X, Me.Location.Y)
             benForm.StartPosition = FormStartPosition.Manual
             benForm.Owner = Me
             benForm.ShowDialog()
