@@ -23,14 +23,14 @@ Partial Class 申し送り
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.dgvInput = New System.Windows.Forms.DataGridView()
-        Me.YmdBox = New ymdBox.ymdBox()
         Me.btnRegist = New System.Windows.Forms.Button()
         Me.btnDelete = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.writerBox = New System.Windows.Forms.TextBox()
         Me.writerListBox = New System.Windows.Forms.ListBox()
         Me.dgvRead = New System.Windows.Forms.DataGridView()
         Me.HmBox = New hmBox.hmBox()
-        Me.writerBox = New System.Windows.Forms.TextBox()
+        Me.YmdBox = New ADBox2.ADBox2()
         CType(Me.dgvInput, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         CType(Me.dgvRead, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -44,20 +44,6 @@ Partial Class 申し送り
         Me.dgvInput.RowTemplate.Height = 21
         Me.dgvInput.Size = New System.Drawing.Size(496, 209)
         Me.dgvInput.TabIndex = 0
-        '
-        'YmdBox
-        '
-        Me.YmdBox.boxType = 8
-        Me.YmdBox.DateText = ""
-        Me.YmdBox.EraLabelText = "R02"
-        Me.YmdBox.EraText = ""
-        Me.YmdBox.Location = New System.Drawing.Point(28, 87)
-        Me.YmdBox.MonthLabelText = "03"
-        Me.YmdBox.MonthText = ""
-        Me.YmdBox.Name = "YmdBox"
-        Me.YmdBox.Size = New System.Drawing.Size(174, 46)
-        Me.YmdBox.TabIndex = 1
-        Me.YmdBox.textReadOnly = False
         '
         'btnRegist
         '
@@ -86,6 +72,15 @@ Partial Class 申し送り
         Me.GroupBox1.TabIndex = 4
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "記載者"
+        '
+        'writerBox
+        '
+        Me.writerBox.ForeColor = System.Drawing.Color.Blue
+        Me.writerBox.ImeMode = System.Windows.Forms.ImeMode.Hiragana
+        Me.writerBox.Location = New System.Drawing.Point(11, 20)
+        Me.writerBox.Name = "writerBox"
+        Me.writerBox.Size = New System.Drawing.Size(90, 19)
+        Me.writerBox.TabIndex = 8
         '
         'writerListBox
         '
@@ -116,27 +111,30 @@ Partial Class 申し送り
         Me.HmBox.Size = New System.Drawing.Size(111, 46)
         Me.HmBox.TabIndex = 7
         '
-        'writerBox
+        'YmdBox
         '
-        Me.writerBox.ForeColor = System.Drawing.Color.Blue
-        Me.writerBox.ImeMode = System.Windows.Forms.ImeMode.Hiragana
-        Me.writerBox.Location = New System.Drawing.Point(11, 20)
-        Me.writerBox.Name = "writerBox"
-        Me.writerBox.Size = New System.Drawing.Size(90, 19)
-        Me.writerBox.TabIndex = 8
+        Me.YmdBox.dateText = ""
+        Me.YmdBox.Location = New System.Drawing.Point(21, 69)
+        Me.YmdBox.Mode = 4
+        Me.YmdBox.monthText = ""
+        Me.YmdBox.Name = "YmdBox"
+        Me.YmdBox.Size = New System.Drawing.Size(181, 45)
+        Me.YmdBox.TabIndex = 1
+        Me.YmdBox.textReadOnly = False
+        Me.YmdBox.yearText = ""
         '
         '申し送り
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(973, 717)
+        Me.Controls.Add(Me.YmdBox)
         Me.Controls.Add(Me.HmBox)
         Me.Controls.Add(Me.dgvRead)
         Me.Controls.Add(Me.writerListBox)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.btnDelete)
         Me.Controls.Add(Me.btnRegist)
-        Me.Controls.Add(Me.YmdBox)
         Me.Controls.Add(Me.dgvInput)
         Me.Name = "申し送り"
         Me.Text = "Report - 申し送り"
@@ -148,7 +146,6 @@ Partial Class 申し送り
 
     End Sub
     Friend WithEvents dgvInput As System.Windows.Forms.DataGridView
-    Friend WithEvents YmdBox As ymdBox.ymdBox
     Friend WithEvents btnRegist As System.Windows.Forms.Button
     Friend WithEvents btnDelete As System.Windows.Forms.Button
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
@@ -156,4 +153,5 @@ Partial Class 申し送り
     Friend WithEvents dgvRead As System.Windows.Forms.DataGridView
     Friend WithEvents HmBox As hmBox.hmBox
     Friend WithEvents writerBox As System.Windows.Forms.TextBox
+    Friend WithEvents YmdBox As ADBox2.ADBox2
 End Class
